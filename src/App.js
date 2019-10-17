@@ -20,14 +20,16 @@ class App extends Component {
         </Header>
         <Drawer title="please pick one">
             <Navigation >
-              <p>who is most smart</p>
+              <p>who is alway angry</p>
+              <p>who is smartest</p>
               <p>who is most lucky</p>    
-              <p>who is most stupid</p>    
-              <p>who is shortest one</p>    
-              <p>who loves break and coffee </p>    
+              <p>who is stupid one </p>    
+              <p>who is shortest one</p>
+              <p>who is oftenly sad</p>
+              <p>who love break and coffee </p>    
               <p>who always talks more </p>    
               <p>who is tallest one</p>    
-              <p>who is most creative</p>    
+              <p>who is most happy</p>    
               <p>who is crazy</p>    
               <p>who is cool</p>    
             </Navigation>

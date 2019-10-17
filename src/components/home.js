@@ -2,20 +2,35 @@ import React, { Component } from 'react'
 import { Textfield, IconButton, Card, CardTitle, CardActions, Button } from 'react-mdl';
 //import { Link } from 'react-router-dom';
 
-var studentsArray = [ 'hamza', 'abdallah', 'naser', 'aisha', 'nazar', 'fatema', 'jamal', 'ahmed', 'mohamed', 'sarah', 'clear', 'tarekh', 'nour']
+var studentsArray = [ 'Hamza', 'Abdallah', 'Naser', 'Aisha', 'Nazar', 'Fatema', 'Jamal', 'Ahmed Jordan', 'Mohamed Dali', 'Sara', 'Mohamed Hussien', 'Clear', 'Maya', 'Tarekh', 'Nour', 'Ahmed Syria']
 var questions = [ 
-    "when was the las time you slept more than nine hours",
-    "what was your recent lie",
-    "what was the last song you sang",
-    "do you think that aliens exists?",
-    "what is your favorite sport"
+    "when was the las time you slept more than nine hours ?",
+    "what was your recent lie ?",
+    "what was the last song you sang ?",
+    "do you think that aliens exists ?",
+    "what is your favorite sport ?",
+    "what are yor current worring about ?",
+    "if magic was real what spell would you try to learn first",
+    "if you given 5 million to open museum what kind of museum would you open ?",
+    "what food have you never eaten but would realy like to try",
+    "if you were moving to another country but could only pack one carry on sized bag, what would you pack",
+    "who created mickey mouse",
+    "what is your favorite sports",
+    "what langauge do you wish could be your native language",
+    "how do you make your slef sleep when you can't seem to get to sleep",
+    "what habit you have now that you wish you started much earlier",
+    "if you get chance to meet one famous artist who would be",
+    "what is the recent things that you google it",
+    "what was the most important appoinment or deadline you missed",
+    "what is most favorite qoute even from movie or book",
+    "19 what movie, picture, video always makes you lough no matter how often watch it ?"
 
  ]
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          value: Math.floor(Math.random() * 15) + 0,
+          value: Math.floor(Math.random() * 16) + 0,
           type: '',
           background: 'url(https://i.ytimg.com/vi/q41AIk3gPKQ/hqdefault.jpg) center / cover',
           question: 'no question',
@@ -54,7 +69,7 @@ class Home extends Component {
             this.setState( { background: "url(https://i0.wp.com/www.twm.news/wp-content/uploads/2019/02/vb171A.gif?w=1000) center / cover" } )
         }else if(this.state.type === "shortest"){
             this.setState( { background: "url(https://thumbs.gfycat.com/UnfortunateLivelyHoneyeater-size_restricted.gif) center / cover" } )
-        }else if(this.state.type === "loves breaks and coffee"){
+        }else if(this.state.type === "love coffee and break"){
             this.setState( { background: "url(https://media.giphy.com/media/q4UBaAHqNWHn2/giphy.gif) center / cover" } )
         }else if(this.state.type === "talks more"){
             this.setState( { background: "url(https://media0.giphy.com/media/GDqc7M5bxx6sU/source.gif) center / cover" } )
@@ -71,7 +86,7 @@ class Home extends Component {
     }
     
     genQuestion(){
-        var random = Math.floor(Math.random() * 5) + 0;
+        var random = Math.floor(Math.random() * 20) + 0;
         if(this.genQuestion2() === false){
         this.setState({ question: random })
         console.log(this.state.number)
@@ -93,7 +108,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <h4>  please don't take it personal JUST FOR FUN!! </h4>
+                <h3><strong> please don't take it personal JUST FOR FUN!! </strong></h3>
 
 
             {/* Expandable Textfield */}
