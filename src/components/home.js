@@ -68,7 +68,7 @@ class Home extends Component {
         }else if(this.state.type === "stupid"){
             this.setState( { background: "url(https://i0.wp.com/www.twm.news/wp-content/uploads/2019/02/vb171A.gif?w=1000) center / cover" } )
         }else if(this.state.type === "shortest"){
-            this.setState( { background: "url(https://thumbs.gfycat.com/UnfortunateLivelyHoneyeater-size_restricted.gif) center / cover" } )
+            this.setState( { background: "url(http://66.media.tumblr.com/39ae4374ae9a153a374cee8c0c1f1978/tumblr_n5fy3maTvh1ruu897o3_250.gif) center / cover" } )
         }else if(this.state.type === "love coffee and break"){
             this.setState( { background: "url(https://media.giphy.com/media/q4UBaAHqNWHn2/giphy.gif) center / cover" } )
         }else if(this.state.type === "talks more"){
@@ -87,8 +87,8 @@ class Home extends Component {
     
     genQuestion(){
         var random = Math.floor(Math.random() * 20) + 0;
-        if(this.genQuestion2() === false){
-        this.setState({ question: random })
+        if(this.genQuestion2() === false){   
+        this.setState({question: random })
         console.log(this.state.number)
         }
 
@@ -119,7 +119,7 @@ class Home extends Component {
                 expandableIcon="search"
             />
              
-             <IconButton name="mood" onClick={this.handleclick } colored />
+             <IconButton name="mood"  style={ bu2style } onClick={this.handleclick } colored />
             { this.state.h ? 
                 
             <div>
@@ -132,6 +132,7 @@ class Home extends Component {
                 </span>
                 </CardActions>
                 </Card>
+                <h3> { questions[this.state.question] } </h3>
                 <Textfield
                     onChange = { this.handlechange2 }
                     label="please choose number..."
@@ -140,7 +141,6 @@ class Home extends Component {
                 <Button primary onClick={this.genQuestion2 }>get question</Button>
                 <br></br>
                 <Button raised colored style={buStyle} onClick={this.genQuestion }>Computer Generate instead of you</Button>
-                <h3> { questions[this.state.question] } </h3>
             </div>
             :null }
            
@@ -161,6 +161,15 @@ const buStyle = {
     background: 'red',
    
    };
+const bu2style = {
+    marginRight: '80px',
+    height: '50px',
+    width: '50px',
+    borderRadius: '40%',
+   
+    background: '#996515',
+   
+   }
 
 
 export default Home
